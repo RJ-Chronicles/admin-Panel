@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Details | Mars</title>
+        <!-- Favicon
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />-->
+        <!-- Core theme CSS (includes Bootstrap)-->
+            <style>
+                .content-class{
+                    background-color: #003366;
+                    color : white;
+                }
+                p{
+                    color : #fff !important;;
+                    margin:0 20px;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            </style>
+        <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href ="/Assets/css/styles.css">
+    </head>
+    <body>
+        
+
+        
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Comp Logo</h3>
+                </div>
+    
+                <ul class="list-unstyled components">
+                    <p>Admin Profile</p>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Approve</a>
+                            </li>
+                            <li>
+                                <a href="#">Reject</a>
+                            </li>
+                            <li>
+                                <a href="#">Pending</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+    
+            </nav>
+    
+            <!-- Page Content  -->
+            <div id="content">
+    
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+    
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            
+                        </button>
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
+    
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/dashboard/approved">Approved</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/dashboard/reject">Rejected</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/dashboard/pending">Pending</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/dashboard/Sent_Back">Sent_Back</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/logout">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        
+                    </div>
+                </nav>
+    
+
+
+                <div class="container" style ="color :black">
+                    <div class="profile_image">
+                        <div class="">
+
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-center ">
+                                  <div class="thumbnail">
+                                    <a href="<%=data.profile_image%>" target="_blank">
+                                      <img src="<%=data.profile_image%>" alt="Lights" style="width:100%">
+                                      <div class="caption">
+                                        <h2 style="font-family: 'Times New Roman', Times, serif;"> <%=data.name%></h2>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="container">
+                            <hr>
+                            <div class="row content-class">
+                                <div class=" col-6 panel panel-default panel-body">
+                                    <br>
+                                    <h2 class="text-center bg-warning text-dark">Personal Info</h2>
+                                    <p>Name           : <%=data.name%></p>
+                                    <p>Contact        : <%=data.mobile%></p>
+                                    <p>Address Line 1 : <%=data.address_1%></p>
+                                    <p>Address Line 2 : <%=data.address_2%></p>
+                                    <p>City           : <%=data.city%> </p>
+                                    <p>Pincode        : <%=data.pincode%></p>
+                                    <p>State          : <%=data.state%></p>
+                                </div>
+                                <div class="service col-6 flex">
+                                    <br>
+                                    <h2 class="text-center bg-warning text-dark">Service Info</h2>
+                                    <p>Service name   : <%=data.service_name%></p>
+                                    <p>Service description: <%=data.service_description %></p>
+                                    <p>Opening time : <%=data.opening_time%></p>
+                                    <p>Opening time : <%=data.closing_time%></p>
+                                    <p>Status  : <%=data.status%></p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="col-12 d-flex justify-content-center ">
+                                    <div class="thumbnail">
+                                      <a href="<%=data.profile_image%>" target="_blank">
+                                        <img src="<%=data.profile_image%>" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                           Cover Images <a href="#"> Show More</a>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-6">
+                                    <div class="d-flex justify-content-around">
+                                        <a class="btn btn-success" href="/users/dashboard/status/approve/<%=data.vendor_id%>">Approve</a>
+                                        <a class="btn btn-danger" href="/users/dashboard/status/reject/<%=data.vendor_id%>">Reject</a>
+                                        <a class="btn btn-warning" href="/users/dashboard/status/sent_back/<%=data.vendor_id%>">Send Back</a>
+                                        
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                            Send Back
+                                        </button>
+  
+  <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <textarea placeholder="your message...">
+
+                                                        </textarea>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                                                    <button type="button" class="btn btn-primary">Send</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+        </script>
+    </body>
+</html>
